@@ -1,0 +1,173 @@
+@import "~antd/dist/antd.css";
+
+
+
+@font-face {
+    font-family: "DINPro-Regular";
+    src:url("../font/DINPro-Regular.otf");
+}
+
+body {
+    margin: 0;
+    font-family: DINPro-Regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: DINPro-Regular source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img {
+    max-width: 100%;
+}
+.index-height{
+    min-height: 100vh;
+}
+.container {
+    padding: 0 5px;
+}
+
+.clear-footer {
+    padding: 24px 0;
+    background-color: #001529;
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 120px;
+    line-height: 64px;
+}
+
+.nav-menu {
+    text-align: right;
+}
+
+.index-nav {
+    margin-top: 10px;
+}
+
+.index-list {
+    background: #FFF;
+    margin-bottom: 10px;
+}
+
+.index-list li {
+    transition: all .3s linear;
+}
+
+.index-list li:hover {
+    background: #f5f5f5;
+}
+
+.index-list .list-data {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.index-list .list-avatar {
+    padding-left: 10px;
+}
+
+.index-list .list-count {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.detail-card {
+    margin-top: 15px;
+}
+
+.detail-card .detail-title {
+    font-size: 20px;
+}
+
+.detail-card em {
+    padding-right: 10px;
+    color: #a9a8a8;
+}
+
+.detail-card em:before {
+    content: "•";
+}
+.user-page .ant-card{
+    margin-top: 15px;
+}
+
+.goods-nav{
+    margin-top: 15px;
+}
+.goods-list{
+    margin-top: 2px;
+}
+.goods-list .ant-card-cover{
+    height: 300px;
+    overflow: hidden;
+}
+.goods-list .ant-card-body{
+    padding: 8px;
+}
+
+.demo-infinite-container {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    overflow: auto;
+    padding: 8px 24px;
+    height: 300px;
+}
+.demo-loading-container {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .index-list .list-title {
+        white-space: nowrap;
+        overflow: hidden;
+        /*text-overflow:ellipsis;*/
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clear-header {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        padding: 0 15px;
+    }
+}
