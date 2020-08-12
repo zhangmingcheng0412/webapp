@@ -73,14 +73,13 @@ function useMoGuJie() {
     // https://list.mogu.com/search?&_version=8193&ratio=3%3A4&cKey=15&page=1&sort=pop&ad=0&fcid=20000371&action=home
     // https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=1&sort=pop&ad=0&fcid=&action=neiyi
     // let api="https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=1&sort=pop&ad=0&fcid=&action=neiyi"
-    return function (action = "action") {
+    return function (action = null,page=1) {
         dispatch({
             type: "mogujie_loading"
         })
-        fetchJsonp(`https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=1&sort=pop&ad=0&fcid=&action=${action}`, {
+        fetchJsonp(`https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=${page}&sort=pop&ad=0&fcid=&action=${action}`, {
             jsonpCallback: 'callback',
-        })
-            .then(function (response) {
+        }).then(function (response) {
                 return response.json()
             }).then(function (res) {
             dispatch({
