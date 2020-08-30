@@ -5,31 +5,41 @@ import reqwest from 'reqwest';
 import InfiniteScroll from 'react-infinite-scroller';
 import fetchJsonp from "fetch-jsonp";
 
+
 // const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
 
 class InfiniteListExample extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(this.props.action)
+    }
     state = {
         data: [],
         loading: false,
         hasMore: true,
-        page:1
+        page:1,
+        action:this.props.action
     };
 
     componentDidMount() {
         console.log("开始请求了")
         this.fetchData((res) => {
             this.setState({
-                data: res
+                data: res,
+                action:this.props.action
             });
-            console.log(this.state.data)
+            console.log(this.state.action)
         });
     }
 
     fetchData = (callback) => {
         // console.log(this.state)
-        let page = this.state.page
+        let {page} = this.state
+        let {action} = this.state
+        // let page = this.state.page
         console.log("state里的page",page)
-        fetchJsonp(`https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=${page}&sort=pop&ad=0&fcid=&action=clothing`, {
+        console.log("this.props里的action",action)
+        fetchJsonp(`https://list.mogu.com/search?_version=8193&ratio=3%3A4&cKey=15&page=${page}&sort=pop&ad=0&fcid=&action=${action}`, {
             jsonpCallback: 'callback',
         })
             .then(function (response) {
