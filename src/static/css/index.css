@@ -101,10 +101,10 @@ img {
 .goods-list{
     margin-top: 2px;
 }
-.goods-list .ant-card-cover{
+/*.goods-list .ant-card-cover{
     height: 300px;
     overflow: hidden;
-}
+}*/
 .goods-list .ant-card-body{
     padding: 8px;
 }

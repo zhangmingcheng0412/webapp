@@ -45,7 +45,7 @@ class InfiniteListExample extends React.Component {
             .then(function (response) {
                 return response.json()
             }).then(function (res) {
-            // console.log('parsed json', res.result.wall.docs)
+            console.log('parsed json', res)
             callback(res.result.wall.docs);
         }).catch(function (ex) {
             console.log('parsing failed', ex)
@@ -125,7 +125,7 @@ class InfiniteListExample extends React.Component {
                                         bordered
                                         // loading={loading}
                                         // style={"goods-img"}
-                                        cover={<img alt={item.tradeItemId} src={item.img} className="goods-img"/>}
+                                        cover={<img alt={item.tradeItemId} src={item.img+"_440x587.v1cAC.40.webp"} className="goods-img"/>}
                                         // cover={<Avatar shape={"square"} size={"default"} src={item.img} className="goods-img"/>}
                                     >
                                         <Card.Meta title={item.title}
@@ -149,27 +149,6 @@ class InfiniteListExample extends React.Component {
                             )}
                         </List>
                     </div>
-                    {/*<List*/}
-                    {/*    dataSource={this.state.data}*/}
-                    {/*    renderItem={item => (*/}
-                    {/*        <List.Item key={item.id}>*/}
-                    {/*            <List.Item.Meta*/}
-                    {/*                avatar={*/}
-                    {/*                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"/>*/}
-                    {/*                }*/}
-                    {/*                title={<a href="https://ant.design">{item.title}</a>}*/}
-                    {/*                description={item.email}*/}
-                    {/*            />*/}
-                    {/*            <div>Content</div>*/}
-                    {/*        </List.Item>*/}
-                    {/*    )}*/}
-                    {/*>*/}
-                    {/*    {this.state.loading && this.state.hasMore && (*/}
-                    {/*        <div className="demo-loading-container">*/}
-                    {/*            <Spin/>*/}
-                    {/*        </div>*/}
-                    {/*    )}*/}
-                    {/*</List>*/}
                 </InfiniteScroll>
             </div>
         );

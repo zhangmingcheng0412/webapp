@@ -86,7 +86,7 @@ function useMoGuJie() {
                 type: "mogujie_loadOver",
                 data: res.result.wall.docs
             })
-            // console.log(res.result.wall.docs)
+            console.log(res.result.wall.docs)
         }).catch(function (ex) {
             console.log('parsing failed', ex)
         })

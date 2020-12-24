@@ -5,6 +5,8 @@ import {EditOutlined, EllipsisOutlined, SettingOutlined, HeartTwoTone} from '@an
 function GoodsList(props) {
     let {data, loading} = props
     return (
+
+
         <div className="goods-list">
             <List
                 grid={{
@@ -24,18 +26,19 @@ function GoodsList(props) {
                             bordered
                             loading={loading}
                             // style={"goods-img"}
-                            cover={<img alt={item.tradeItemId} src={item.img} className="goods-img"/>}
+                            cover={<img alt={item.tradeItemId} src={item.img+"_440x587.v1cAC.40.webp"} className="goods-img"/>}
                             // cover={<Avatar shape={"square"} size={"default"} src={item.img} className="goods-img"/>}
                         >
                             <Card.Meta title={item.title}
-                                       // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"/>}
-                                       description={<Fragment>
-                                           <p>
-                                               <span style={{paddingRight: 20}}>￥{item.price}</span>
-                                               <span style={{paddingRight: 20}}>￥{item.orgPrice}</span>
-                                               <span style={{paddingRight: 20}}>{<HeartTwoTone/>}{item.cfav}</span>
-                                           </p>
-                                       </Fragment>}/>
+                                // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"/>}
+                                   description={<Fragment>
+                                       <p>
+                                           <span style={{paddingRight: 20}}>￥{item.price}</span>
+                                           <span style={{paddingRight: 20}}>￥{item.orgPrice}</span>
+                                           <span style={{paddingRight: 20}}>{<HeartTwoTone/>}{item.cfav}</span>
+                                       </p>
+                                   </Fragment>}
+                            />
                         </Card>
                     </List.Item>
                 )}
